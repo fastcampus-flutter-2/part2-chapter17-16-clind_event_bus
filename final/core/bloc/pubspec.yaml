@@ -1,0 +1,11 @@
+name: core_bloc
+description: core bloc package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  bloc: 8.1.4
+  equatable: 2.0.5

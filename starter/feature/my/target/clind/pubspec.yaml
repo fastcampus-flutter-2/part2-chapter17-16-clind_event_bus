@@ -1,0 +1,31 @@
+name: feature_my
+description: feature my package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  my_data:
+    path: ../../data
+  my_domain:
+    path: ../../domain
+  my_presentation:
+    path: ../../presentation
+
+  my_di:
+    path: ../../di
+
+  core_flutter_bloc:
+    path: ../../../../core/flutter_bloc
+  core_util:
+    path: ../../../../core/util
+
+  tool_clind_component:
+    path: ../../../../tool/clind/component
+  tool_clind_theme:
+    path: ../../../../tool/clind/theme

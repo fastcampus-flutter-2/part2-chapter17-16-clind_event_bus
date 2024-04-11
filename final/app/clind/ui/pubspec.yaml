@@ -1,0 +1,38 @@
+name: ui
+description: clind ui package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  data:
+    path: ../data
+  domain:
+    path: ../domain
+  presentation:
+    path: ../presentation
+
+  di:
+    path: ../di
+
+  core_flutter_bloc:
+    path: ../../../core/flutter_bloc
+  core_util:
+    path: ../../../core/util
+
+  feature_community:
+    path: ../../../feature/community/target/clind
+  feature_notification:
+    path: ../../../feature/notification/target/clind
+  feature_my:
+    path: ../../../feature/my/target/clind
+
+  tool_clind_component:
+    path: ../../../tool/clind/component
+  tool_clind_theme:
+    path: ../../../tool/clind/theme

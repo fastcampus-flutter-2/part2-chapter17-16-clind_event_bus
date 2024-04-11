@@ -1,0 +1,65 @@
+name: clind
+description: A new Flutter project.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  core_util:
+    path: ../../core/util
+
+  feature_community:
+    path: ../../feature/community/target/clind
+  feature_my:
+    path: ../../feature/my/target/clind
+  feature_notification:
+    path: ../../feature/notification/target/clind
+  feature_search:
+    path: ../../feature/search/target/clind
+
+  tool_clind_theme:
+    path: ../../tool/clind/theme
+
+  ui:
+    path: ui
+
+  icons_launcher: 2.1.7
+  flutter_native_splash: 2.4.0
+
+icons_launcher:
+  image_path: assets/icons/androidAppIcon.png
+  platforms:
+    android:
+      enable: true
+      adaptive_background_color: "#4F0504"
+      adaptive_foreground_image: assets/icons/androidAppIcon.png
+      adaptive_round_image: assets/icons/androidAppIcon.png
+    ios:
+      enable: true
+      image_path: assets/icons/iOSAppIcon.png
+
+flutter_native_splash:
+  color: "#4F0504"
+  image: assets/icons/splash.png
+  color_dark: "#4F0504"
+  image_dark: assets/icons/splash.png
+  android: true
+  ios: true
+  web: false
+  android_12:
+    color: "#4F0504"
+    image: assets/icons/android12Splash.png
+    icon_background_color: "#4F0504"
+    color_dark: "#4F0504"
+    image_dark: assets/icons/android12Splash.png
+    icon_background_color_dark: "#4F0504"
+  android_gravity: center
+  ios_content_mode: center

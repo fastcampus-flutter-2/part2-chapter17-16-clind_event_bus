@@ -1,0 +1,14 @@
+name: tool_clind_network
+description: tool clind network package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  core_network:
+    path: ../../../core/network

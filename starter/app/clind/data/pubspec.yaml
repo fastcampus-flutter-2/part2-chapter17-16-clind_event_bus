@@ -1,0 +1,14 @@
+name: data
+description: clind data package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  domain:
+    path: ../domain
+
+  core_util:
+    path: ../../../core/util

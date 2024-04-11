@@ -1,0 +1,21 @@
+name: di
+description: clind di package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  data:
+    path: ../data
+  domain:
+    path: ../domain
+  presentation:
+    path: ../presentation
+
+  core_flutter_bloc:
+    path: ../../../core/flutter_bloc

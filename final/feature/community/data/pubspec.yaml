@@ -1,0 +1,17 @@
+name: community_data
+description: feature community data package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  community_domain:
+    path: ../domain
+
+  core_util:
+    path: ../../../core/util
+
+  tool_clind_network:
+    path: ../../../tool/clind/network

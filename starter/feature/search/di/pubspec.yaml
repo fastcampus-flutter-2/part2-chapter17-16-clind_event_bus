@@ -1,0 +1,26 @@
+name: search_di
+description: feature search di package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  search_data:
+    path: ../data
+  search_domain:
+    path: ../domain
+  search_presentation:
+    path: ../presentation
+
+  core_flutter_bloc:
+    path: ../../../core/flutter_bloc
+  core_util:
+    path: ../../../core/util
+
+  tool_clind_network:
+    path: ../../../tool/clind/network

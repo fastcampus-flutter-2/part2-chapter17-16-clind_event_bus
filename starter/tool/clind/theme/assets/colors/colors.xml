@@ -1,0 +1,26 @@
+<resources>
+    <color name="mainRed">#FFC83036</color>
+    <color name="blue">#FF007afe</color>
+    <color name="writingButton">#FFFC6A6B</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#FFF2F2F7</color>
+    <color name="gray100">#FFE5E5Ea</color>
+    <color name="gray200">#FFD4D4D4</color>
+    <color name="gray300">#FFAEAEB2</color>
+    <color name="gray400">#FF8E8E93</color>
+    <color name="gray500">#FF848487</color>
+    <color name="gray600">#FF636366</color>
+    <color name="gray700">#FF4A4A4A</color>
+    <color name="gray800">#FF303030</color>
+    <color name="gray900">#FF242424</color>
+    <color name="black">#FF000000</color>
+    <color name="bg2">#FF191919</color>
+    <color name="lightGray">#FFD9D9D9</color>
+    <color name="darkGray">#FF262628</color>
+    <color name="lightBlack">#FF1C1C1E</color>
+    <color name="darkBlack">#FF121212</color>
+    <color name="splashBackground">#FF4F0504</color>
+    <color name="profileCardBackground">#FF42424B</color>
+    <color name="profileCardButtonBackground">#FF3B3B43</color>
+    <color name="profileCardDetailBackground">#FF3B3B45</color>
+</resources>

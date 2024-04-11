@@ -1,0 +1,13 @@
+name: core_network
+description: core network package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  dio: 5.4.2+1

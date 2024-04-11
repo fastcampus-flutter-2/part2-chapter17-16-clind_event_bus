@@ -1,0 +1,325 @@
+openapi: 3.0.0
+info:
+  description: "API system"
+  version: "1.0.10"
+  title: "Swagger Clind"
+servers:
+  - url: http://127.0.0.1:8080/
+    description: Remote server
+tags:
+  - name: "post-api"
+    description: "Access to Post"
+  - name: "notification-api"
+    description: "Access to Notification"
+  - name: "profile-api"
+    description: "Access to Profile"
+
+paths:
+  /post-api/channels:
+    get:
+      tags:
+        - "post-api"
+      summary: 모든 채널 목록을 가져옵니다.
+      responses:
+        '200':
+          description: 성공적으로 채널 목록을 불러옴.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Channel'
+  /post-api/channel/{id}:
+    get:
+      tags:
+        - "post-api"
+      summary: 특정 ID를 가진 채널을 가져옵니다.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: 채널의 고유 ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 성공적으로 특정 채널 정보를 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Channel'
+  /post-api/popular/channels:
+    get:
+      tags:
+        - "post-api"
+      summary: 인기 채널 목록을 가져옵니다.
+      responses:
+        '200':
+          description: 성공적으로 인기 채널 목록을 불러옴.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Channel'
+  /post-api/post/{id}:
+    get:
+      tags:
+        - "post-api"
+      summary: 특정 게시글을 가져옵니다.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: 게시글 고유 ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 성공적으로 특정 게시글 정보를 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+  /post-api/post/create:
+    post:
+      tags:
+        - "post-api"
+      summary: 게시글을 생성합니다.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - channel
+                - title
+                - content
+              properties:
+                channel:
+                  type: string
+                  description: 게시글 채널
+                title:
+                  type: string
+                  description: 게시글 제목
+                content:
+                  type: string
+                  description: 게시글 내용
+      responses:
+        '200':
+          description: 성공적으로 게시글이 생성됨
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+  /post-api/posts:
+    get:
+      tags:
+        - "post-api"
+      summary: 게시글 목록을 가져옵니다.
+      parameters:
+        - name: take
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 한 페이지당 가져올 게시물의 수입니다.
+        - name: page
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 가져올 페이지 번호입니다.
+      responses:
+        '200':
+          description: 성공적으로 게시글 목록을 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+  /post-api/posts/search:
+    get:
+      tags:
+        - "post-api"
+      summary: 특정 게시글 목록을 가져옵니다.
+      parameters:
+        - name: query
+          in: query
+          schema:
+            type: string
+          required: false
+          description: 검색에 사용할 키워드입니다.
+        - name: take
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 한 페이지당 가져올 게시물의 수입니다.
+        - name: page
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 가져올 페이지 번호입니다.
+      responses:
+        '200':
+          description: 성공적으로 특정 게시글 목록을 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+  /post-api/comments/{postId}:
+    get:
+      tags:
+        - "post-api"
+      summary: 특정 게시글의 댓글 목록을 가져옵니다.
+      parameters:
+        - name: postId
+          in: path
+          required: true
+          description: 게시글 고유 ID
+          schema:
+            type: string
+        - name: take
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 한 페이지당 가져올 댓글의 수입니다.
+        - name: page
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 가져올 페이지 번호입니다.
+      responses:
+        '200':
+          description: 성공적으로 특정 게시글에 대한 댓글 목록을 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+  /notification-api/notifications:
+    get:
+      tags:
+        - "notification-api"
+      summary: 알림 목록을 가져옵니다.
+      responses:
+        '200':
+          description: 성공적으로 알림 목록을 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Notification'
+  /profile-api/my:
+    get:
+      tags:
+        - "profile-api"
+      summary: 내 정보를 가져옵니다.
+      responses:
+        '200':
+          description: 성공적으로 내 정보를 불러옴.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+components:
+  schemas:
+    Channel:
+      type: object
+      properties:
+        id:
+          type: string
+        imageUrl:
+          type: string
+        name:
+          type: string
+        followCount:
+          type: integer
+
+    Comment:
+      type: object
+      properties:
+        id:
+          type: string
+        postId:
+          type: string
+        user:
+          $ref: '#/components/schemas/User'
+        content:
+          type: string
+        createdAt:
+          type: integer
+
+    Post:
+      type: object
+      properties:
+        id:
+          type: string
+        imageUrl:
+          type: string
+        channel:
+          type: string
+        company:
+          type: string
+        title:
+          type: string
+        content:
+          type: string
+        thumbnailUrls:
+          type: array
+          items:
+            type: string
+        isLike:
+          type: boolean
+        likeCount:
+          type: integer
+        commentCount:
+          type: integer
+        viewCount:
+          type: integer
+        createdAt:
+          type: integer
+
+    Notification:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        content:
+          type: string
+        route:
+          type: string
+        createdAt:
+          type: integer
+        type:
+          $ref: '#/components/schemas/NotificationType'
+
+    NotificationType:
+      type: string
+      enum:
+        - ALARM
+        - NOTICE
+      description: 알림의 타입
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        imageUrl:
+          type: string
+        company:
+          type: string
+        name:
+          type: string
+        postCount:
+          type: integer
+        commentCount:
+          type: integer
+        likeCount:
+          type: integer

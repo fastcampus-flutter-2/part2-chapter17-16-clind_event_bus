@@ -1,0 +1,17 @@
+name: notification_data
+description: feature notification data package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  notification_domain:
+    path: ../domain
+
+  core_util:
+    path: ../../../core/util
+
+  tool_clind_network:
+    path: ../../../tool/clind/network

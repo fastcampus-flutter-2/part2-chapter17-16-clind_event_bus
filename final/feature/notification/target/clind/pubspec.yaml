@@ -1,0 +1,31 @@
+name: feature_notification
+description: feature notification package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  notification_data:
+    path: ../../data
+  notification_domain:
+    path: ../../domain
+  notification_presentation:
+    path: ../../presentation
+
+  notification_di:
+    path: ../../di
+
+  core_flutter_bloc:
+    path: ../../../../core/flutter_bloc
+  core_util:
+    path: ../../../../core/util
+
+  tool_clind_component:
+    path: ../../../../tool/clind/component
+  tool_clind_theme:
+    path: ../../../../tool/clind/theme

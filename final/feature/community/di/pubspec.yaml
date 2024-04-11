@@ -1,0 +1,26 @@
+name: community_di
+description: feature community di package.
+publish_to: none
+
+environment:
+  sdk: 3.2.6
+  flutter: 3.16.9
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  community_data:
+    path: ../data
+  community_domain:
+    path: ../domain
+  community_presentation:
+    path: ../presentation
+
+  core_flutter_bloc:
+    path: ../../../core/flutter_bloc
+  core_util:
+    path: ../../../core/util
+
+  tool_clind_network:
+    path: ../../../tool/clind/network

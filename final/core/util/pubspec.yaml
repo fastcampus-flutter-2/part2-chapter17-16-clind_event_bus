@@ -3,8 +3,8 @@ description: core util package.
 publish_to: none
 
 environment:
-  sdk: 3.2.6
-  flutter: 3.16.9
+  sdk: 3.8.1
+  flutter: 3.32.8
 
 dependencies:
   flutter:
@@ -12,9 +12,9 @@ dependencies:
 
   custom_refresh_indicator: 3.1.0
   event_bus: 2.0.0
-  firebase_core: 2.27.0
-  firebase_remote_config: 4.3.17
   flutter_modular: 6.3.3
+  firebase_remote_config: ^5.5.0
+  firebase_core: ^3.0.0
   flutter_svg: 2.0.10+1
-  intl: 0.18.1
+  intl: 0.20.2
   shimmer: 3.0.0

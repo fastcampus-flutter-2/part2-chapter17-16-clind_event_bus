@@ -3,8 +3,8 @@ description: feature community domain package.
 publish_to: none
 
 environment:
-  sdk: 3.2.6
-  flutter: 3.16.9
+  sdk: 3.8.1
+  flutter: 3.32.8
 
 dependencies:
   core_util:
@@ -14,6 +14,7 @@ dependencies:
   json_annotation: 4.8.1
 
 dev_dependencies:
-  build_runner: 2.4.8
+  analyzer: 6.11.0
+  build_runner: 2.5.3
   freezed: 2.5.2
   json_serializable: 6.7.1
